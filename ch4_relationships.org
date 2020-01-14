@@ -1,0 +1,11 @@
+Information is made up of relationships. 
+
+The significance of a relationship will be referred to as its "reason". E.g
+You => car, reason = owner.
+
+The reason is an important aspect of the relationship; several different
+relationships can exist between the same objects.
+
+* Degree, Domain and Role
+An instance of a relationship includes one thing from each category. The degree
+of such a relationship would then be the number of categories in the defining pattern.
