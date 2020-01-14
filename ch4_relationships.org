@@ -7,5 +7,24 @@ The reason is an important aspect of the relationship; several different
 relationships can exist between the same objects.
 
 * Degree, Domain and Role
+
+** Degree
 An instance of a relationship includes one thing from each category. The degree
-of such a relationship would then be the number of categories in the defining pattern.
+of such a relationship would then be the number of categories in the defining
+pattern.
+
+** Domain
+Domain designates all the things that may occur at a given position in the
+relationship. Thus, an "owns" relationship has two domains, one contains
+employees, departments, divisions; the other includes furniture, pencils,
+vehicles etc.
+
+** Role
+The above can be improved by giving a name to the domain:
+- owner
+- owned
+
+* Forms of binary relationship
+
+
+
