@@ -1,0 +1,31 @@
+
+* Sameness (Equality)
+
+Counter part to the existence test => equality test; i.e when does two symbols
+refer to the same entity?
+
+** Tests
+
+*** Match test
+Simple comparison between the symbols. Entities are the same iff the symbols
+themselves are the same.
+
+*** Surrogate test
+If the symbols refer to the same record (record with the same primary key) then
+the symbols are equal.
+
+*** List test
+A list of synonyms are kept stating which symbols are judged to be the same.
+
+*** Procedural test
+Involves some arbitrary procedure by which the two symbols are judged equal.
+
+** Failures
+When equality is based on symbol matching, several kinds of erroneous results
+can arise. 
+ - If the things have aliases, equality will not be detected
+ - If the symbols can be ambiguous, then spurious matches will occur. Different
+things can match because their names match.
+
+These concerns are especially relevant when trying to detect implicit
+relationships based on matching symbols. 
