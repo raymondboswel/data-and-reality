@@ -7,7 +7,6 @@ The reason is an important aspect of the relationship; several different
 relationships can exist between the same objects.
 
 * Degree, Domain and Role
-
 ** Degree
 An instance of a relationship includes one thing from each category. The degree
 of such a relationship would then be the number of categories in the defining
@@ -25,6 +24,56 @@ The above can be improved by giving a name to the domain:
 - owned
 
 * Forms of binary relationship
+** Complexity
+Relationships might be one-to-one, many-to-one, many-to-many.
+Another way to characterize complexity is to describe each direction of the
+relationship separately as simple (mapping one element to one) or complex (one
+to many)
+** Category constraints
+Each side of relationship might be constrained to a single category,
+constrained to any of several specified categories, or unconstrained. (A total
+of nine possibilities.)
+** Self relation
+Three possibilities:
+  1. The relationship is not meaningful between things in the same category.
+  2. Things in the same category may be related, but a thing may not be related
+to itself
+  3. Things may be related to themselves.
 
+Self relations are described in the data model through a recursive relation,
+which is a relationship that starts and ends at the same entity type. Recursive
+relationships allow for a lot of flexibility, but come with the high price of
+reducing model readability and obscuring business rules.
 
+For example:
 
+Organization Level   vs  |Country| -- contains -- |region| -- contains -- |zone|
+      |        |         
+      |contain_|
+
+** Optionality
+On either side of the relationship, the relationship might be optional or mandatory.
+
+** The number of forms
+A simple calculation of the number of permututations yields (4 * 9 * 3 * 4) =
+432 forms. 
+
+** Other Characteristics
+Other characteristics worth describing
+
+** Transitivity
+If X is related to Y, and Y is related to Z, then X is related to Z.
+
+** Symmetry
+For some relationships, if X is related to Y, that implies Y has the same
+relationship to X. ex: "is married to"
+
+** Anti Symmetry
+Ex: "Is manager of"
+
+** Implication (composition)
+Ex: Employee -> Department -> Division, thus Employee -> Division
+
+** Consistency (Subset)
+An employee -> department relationship can be viewed as a subset of Employee ->
+All Previous Departments
